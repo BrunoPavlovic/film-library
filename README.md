@@ -10,4 +10,6 @@ First use: need to run **npm install** :
 - base32-encoding
 - nodemailer
 
-Project is not hosted. So you will need to start restServer and appServer with npm start from folder servis and aplikacija.
+Also, you need to change in konstante.js (film-library/server/konstante.js) variable dirModula and set its value to path of your node_modules folder.
+
+Project is not hosted. So you will need to start restServer and appServer with **npm start** from folder servis and aplikacija.

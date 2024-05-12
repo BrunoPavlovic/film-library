@@ -1,0 +1,28 @@
+<br><br><br>
+<div>
+    <br><br>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Jezik</th>
+            <th>Naslov orginala</th>
+            <th>Naslov</th>
+            <th>Opis</th>
+            <th>Datum</th>
+            <th>Ocjena</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let f of filmoviPolje">
+            <td>{{f.id}}</td>
+            <td>{{f.jezik}}</td>
+            <td>{{f.originalni_naslov}}</td>
+            <td>{{f.naziv}}</td>
+            <td>{{f.opis}}</td>
+            <td>{{f.datum_objave}}</td>
+            <td>{{f.ocjena_filma}}</td>
+            <td><button (click)="odobri(f)">Odobri</button></td>
+            <td><button (click)="odbij(f)">Odbij</button></td>
+        </tr>
+    </table>
+</div>

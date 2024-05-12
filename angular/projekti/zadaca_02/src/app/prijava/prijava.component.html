@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <title>Prijava</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <main>
+        <!--<div id="poruka">#poruka#</div>-->
+        <form #prijava="ngForm">
+            <label for="korime">Korisničko ime</label><br>
+            <input name="korime" type="text" id="korime" ngModel><br><br>
+            <label for="lozinka">Lozinka</label><br>
+            <input name="lozinka" type="text" id="lozinka" ngModel><br><br>
+            <input type="submit" value="Šalji" (click)="provjeriRECAPTCHA(prijava,prijava.value)">
+        </form>
+        <br><br>
+        <p>Podaci za prijavu:<br>
+            Korisnicko ime: obican <br> Lozinka:rwa<br><br>
+            <br><br>Podaci za prijavu2:<br>
+            Korisnicko ime: administrator<br> Lozinka:rwa<br>
+            <br>
+        </p>
+        <br><br>
+        <br><br>
+        <div *ngIf="tokenVisible"> reCAPTCHA Token <br />
+            <p>{{reCAPTCHAToken}}</p>
+        </div>
+    </main>
+</body>
+
+</html>

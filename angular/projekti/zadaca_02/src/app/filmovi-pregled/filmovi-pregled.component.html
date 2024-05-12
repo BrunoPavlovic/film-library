@@ -1,0 +1,37 @@
+<br><br><br>
+<div>
+    <br><br>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Jezik</th>
+            <th>Naslov orginala</th>
+            <th>Naslov</th>
+            <th>Opis</th>
+            <th>Datum</th>
+            <th>Ocjena</th>
+        </tr>
+        <tr *ngFor="let f of filmoviPolje">
+            <td>{{f.id}}</td>
+            <td>{{f.jezik}}</td>
+            <td>{{f.originalni_naslov}}</td>
+            <td><a (click)="odabraniFilm(f)">{{f.naziv}}</a></td>
+            <td>{{f.opis}}</td>
+            <td>{{f.datum_objave}}</td>
+            <td>{{f.ocjena_filma}}</td>
+        </tr>
+    </table>
+</div>
+<br><br><br>
+<div *ngIf="odabrani" id="drugiDiv">
+        <table>
+            <th>Film</th>
+            <tr>{{film.id}}</tr>
+            <tr>{{film.jezik}}</tr>
+            <tr>{{film.originalni_naslov}}</tr>
+            <tr>{{film.naziv}}</tr>
+            <tr>{{film.opis}}</tr>
+            <tr>{{film.datum_objave}}</tr>
+            <tr>{{film.ocjena_filma}}</tr>
+        </table>
+</div>

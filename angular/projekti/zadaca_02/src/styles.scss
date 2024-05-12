@@ -1,0 +1,28 @@
+$primary-color : #E5E5E5 ;
+$secondary-color: #934A5F;
+* {
+    background-color:$primary-color;
+
+    h1{
+        text-align: center;
+    }
+}
+
+nav {
+    background-color: $secondary-color;
+    overflow: hidden;
+    a {
+        float: left;
+        color: white;
+        background-color: $secondary-color;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:underline;
+        font-size: 17px;
+    }
+
+    a:hover{
+        background-color: #ddd;
+        color: black;
+    }
+}

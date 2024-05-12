@@ -1,0 +1,40 @@
+<br><br><br>
+<div>
+    <br><br>
+    <table>
+        <caption>Zanrovi-TMDB</caption>
+        <tr>
+            <th>Id</th>
+            <th>Naziv</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let f of zanrovi">
+            <td>{{f.id}}</td>
+            <td>{{f.name}}</td>
+            <td><button (click)="dodajUbazu(f.id,f)">Dodaj</button></td>
+        </tr>
+    </table>
+</div>
+
+<br><br><br>
+<div *ngIf="ima">
+    <br><br>
+    <button (click)="obrisiKojeNemaju()">Obriši sve za koje nema film</button><br>
+    <table>
+        <caption>Zanrovi-BAZA</caption>
+        <tr>
+            <th>Id</th>
+            <th>Naziv</th>
+            <th>Tmdb id</th>
+        </tr>
+        <tr *ngFor="let f of zanroviBaza">
+            <td>{{f.id}}</td>
+            <td>{{f.naziv}}</td>
+            <td>{{f.tmdb}}</td>
+        </tr>
+    </table>
+</div>
+<div *ngIf="nema">
+    <p>{{zanrPostoji.naziv}} već postoji u bazi.</p>
+</div>
+

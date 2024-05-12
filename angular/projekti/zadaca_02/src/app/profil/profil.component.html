@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <title>Profil</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <main>
+        <form #profil="ngForm">
+            <label for="ime">Ime</label>
+            <br>
+            <input type="text" name="ime" id="ime" ngModel>
+            <br><br>
+            <label for="prezime">Prezime</label><br>
+            <input type="text" name="prezime" id="prezime" ngModel><br>
+            <br>
+            <label for="lozinka">Lozinka</label><br>
+            <input type="password" name="lozinka" id="lozinka" ngModel><br>
+            <br>
+            <label for="email">email</label><br>
+            <input type="email" name="email" id="email" ngModel disabled><br>
+            <br>
+            <label for="korime">Korisničko ime</label><br>
+            <input type="text" name="korime" id="korime" ngModel disabled><br>
+            <br>
+            <label for="datum_rođenja">Datum rođenja: </label><br>
+            <input type="date" name="datum_rođenja" id="datum_rođenja" ngModel><br><br>
+            <input type="submit" value="Ažuriraj podatke" (click)="provjeriRECAPTCHA(profil,profil.value)">
+        </form>
+        <br><br><br><br>
+        <div *ngIf="tokenVisible"> reCAPTCHA Token <br />
+            <p>{{reCAPTCHAToken}}</p>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

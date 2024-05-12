@@ -1,0 +1,17 @@
+{
+  "name": "servis",
+  "version": "1.0.0",
+  "description": "pokretanje rest servera",
+  "main": "restServer.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --experimental-fetch restServer.js ../rwa_bpavlovic_conf.csv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Pavlovic",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
